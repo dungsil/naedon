@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind variants;
+
+@layer base {
+  html {
+    color-scheme: dark;
+
+    background-color: theme('backgroundColor.base');
+    color: theme('textColor.base');
+
+    @apply antialiased;
+  }
+}
