@@ -16,7 +16,9 @@
     "@vueuse/core": "^10.11.0",
     "@vueuse/nuxt": "^10.11.0",
     "nuxt": "^3.12.3",
-    "radix-vue": "^1.9.0"
+    "radix-vue": "^1.9.0",
+    "vue": "^3.4.31",
+    "vue-router": "^4.4.0"
   },
   "devDependencies": {
     "@nuxt/eslint": "^0.3.13",
