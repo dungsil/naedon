@@ -9,6 +9,7 @@
     "postinstall": "nuxi prepare",
     "dev": "nuxi dev",
     "build": "nuxi build",
+    "test:ci": "act --artifact-server-path ./.act",
     "preview": "nuxi preview"
   },
   "dependencies": {
