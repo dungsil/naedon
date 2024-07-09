@@ -11,7 +11,10 @@ export default withNuxt([
         singleline: {
           max: 2
         }
-      }]
+      }],
+
+      // Nuxt 에서 자동으로 프리픽스 'n'을 붙이므로 비활성화
+      'vue/multi-word-component-names': ['off']
     }
   }
 ])
