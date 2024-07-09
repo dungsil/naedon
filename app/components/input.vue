@@ -42,6 +42,6 @@ const modelValue = useVModel(props, 'modelValue', emits, {
     :class="cx(variants(props), props.class)"
     :name="props.name"
     :placeholder="props.placeholder"
-    :type="props.autocomplete"
+    :type="props.type"
   >
 </template>
