@@ -1,3 +1,4 @@
+import { eslint } from './scripts/eslint.nuxt'
 export default defineNuxtConfig({
   modules: ['@nuxt/eslint', '@nuxtjs/tailwindcss', '@pinia/nuxt', '@vueuse/nuxt', 'radix-vue/nuxt'],
 
@@ -34,22 +35,8 @@ export default defineNuxtConfig({
     enabled: true,
   },
 
-  eslint: {
-    config: {
-      stylistic: {
-        indent: 2,
 
-        semi: false,
-        arrowParens: true,
-        blockSpacing: true,
-
-        quotes: 'single',
-        quoteProps: 'as-needed',
-        braceStyle: 'stroustrup',
-        commaDangle: 'always-multiline',
-      },
-    },
-  },
+  eslint,
 
   tailwindcss: {
     quiet: true,
