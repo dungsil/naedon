@@ -4,10 +4,21 @@ on:
   pull_request:
     branches-ignore:
       - main
+    paths:
+      - "app/**"
+      - "public/**"
+      - "scripts/**"
+      - "server/**"
+      - "**/.config.ts"
   push:
     branches:
       - main
-
+    paths:
+      - "app/**"
+      - "public/**"
+      - "scripts/**"
+      - "server/**"
+      - "**/.config.ts"
 jobs:
   build:
     name: 빌드
