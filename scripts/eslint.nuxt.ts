@@ -11,7 +11,7 @@ export const eslint: NuxtConfig['eslint'] = {
 
       quotes: 'single',
       quoteProps: 'as-needed',
-      braceStyle: 'stroustrup',
+      braceStyle: '1tbs',
       commaDangle: 'always-multiline',
     },
   },
