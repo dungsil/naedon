@@ -4,6 +4,24 @@ const fields = [
   { name: 'password', label: '비밀번호', type: 'password', autocomplete: 'current-password' },
 ]
 
+const router = useRouter()
+const auth = useAuthStore()
+
+async function onLogin(e: Event) {
+  const data = new FormData(e.target as HTMLFormElement)
+
+  const { ok, message } = await auth.login({
+    username: data.get('username') as string,
+    password: data.get('password') as string,
+  })
+
+  if (ok) {
+    await router.replace('/')
+  } else {
+    alert(message)
+  }
+}
+
 definePageMeta({ layout: 'auth' })
 </script>
 
@@ -18,7 +36,12 @@ definePageMeta({ layout: 'auth' })
       </p>
     </div>
 
-    <div class="mt-10 flex w-full max-w-screen-md flex-col gap-y-4">
+    <form
+      action="/api/authorize"
+      class="mt-10 flex w-full max-w-screen-md flex-col gap-y-4"
+      method="POST"
+      @submit.prevent="onLogin"
+    >
       <div
         v-for="field in fields"
         :key="field.name"
@@ -41,6 +64,6 @@ definePageMeta({ layout: 'auth' })
           로그인
         </n-button>
       </div>
-    </div>
+    </form>
   </div>
 </template>
