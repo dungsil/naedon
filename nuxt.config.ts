@@ -1,4 +1,6 @@
 import { eslint } from './scripts/eslint.nuxt'
+import { devServer } from './scripts/devserver.nuxt'
+
 export default defineNuxtConfig({
   modules: ['@nuxt/eslint', '@nuxtjs/tailwindcss', '@pinia/nuxt', '@vueuse/nuxt', 'radix-vue/nuxt'],
 
@@ -35,6 +37,7 @@ export default defineNuxtConfig({
     enabled: true,
   },
 
+  devServer,
 
   eslint,
 
