@@ -4,7 +4,7 @@
   "name": "@dungsil/naedon",
   "license": "MIT",
   "repository": "https://github.com/dungsil/naedon.git",
-  "packageManager": "pnpm@9.6.0",
+  "packageManager": "pnpm@9.7.0",
   "scripts": {
     "postinstall": "nuxi prepare",
     "dev": "nuxi dev",
